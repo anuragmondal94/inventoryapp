@@ -7,8 +7,10 @@
 </div>
 <!--Display if rooms.availableRooms is available else display no rooms-->
 <!-- {{rooms?.availableRooms ?? 'No Rooms'}} -->
+<!-- {{roomList | json}} -->
+
 <!--Built in Directive-->
-<div *ngIf = "rooms.availableRooms > 0 ">
+<div *ngIf="rooms.availableRooms > 0 ">
     Rooms List
     <table>
         <tr>
@@ -19,15 +21,17 @@
             <th>Amenities</th>
             <th>Check in Time</th>
             <th>Price</th>
+            <th>Rating</th>
         </tr>
-        <tr *ngFor="let room of roomList; let e =even; let o = odd; let i = index;" >
+        <tr [ngClass]="e? 'even' : 'odd'" *ngFor="let room of roomList; let e =even; let o = odd; let i = index;">
             <td>{{i}}</td>
             <td>{{e ? "Even" : "Odd"}}</td>
             <td>{{room.roomNumber}}</td>
-            <td>{{room.roomType}}</td>
-            <td>{{room.amenites}}</td>
-            <td>{{room.checkInTIme}}</td>
-            <td>{{room.price}}</td>
+            <td>{{room.roomType | uppercase}}</td>
+            <td>{{room.amenites | titlecase}}</td>
+            <td>{{room.checkInTIme | date : 'MMM/dd/yyyy'}}</td>
+            <td>{{room.price | currency}}</td>
+            <td>{{room.rating}}</td>
         </tr>
     </table>
 </div>

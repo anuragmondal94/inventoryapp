@@ -28,7 +28,8 @@ export class RoomsComponent {
       price: 500,
       photos: 'https://unsplash.com/photos/YMOHw3F1Hdk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
       checkInTIme: new Date('11-Nov-2023'),
-      checkoutTime: new Date('12-Nov-2023')
+      checkoutTime: new Date('12-Nov-2023'),
+      rating : 3.48
     },
 
     {
@@ -38,7 +39,8 @@ export class RoomsComponent {
       price: 1000,
       photos: 'https://unsplash.com/photos/YMOHw3F1Hdk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
       checkInTIme: new Date('11-Nov-2023'),
-      checkoutTime: new Date('12-Nov-2023')
+      checkoutTime: new Date('12-Nov-2023'),
+      rating : 4.78
     },
 
     {
@@ -48,7 +50,8 @@ export class RoomsComponent {
       price: 5000,
       photos: 'https://unsplash.com/photos/YMOHw3F1Hdk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
       checkInTIme: new Date('11-Nov-2023'),
-      checkoutTime: new Date('12-Nov-2023')
+      checkoutTime: new Date('12-Nov-2023'),
+      rating : 4.32
     }
 
 

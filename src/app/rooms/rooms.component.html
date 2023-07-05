@@ -19,7 +19,7 @@
     <button (click)="addRoom()">Add Room</button>
 </div>
 <!--Built in Directive-->
-<div *ngIf="rooms.availableRooms > 0 ">
+<div *ngIf="hideRooms">
     <!-- Communicating with parent using @input-->
     <app-rooms-list [rooms]="roomList" [title]="title" (selectedRoom)="selectRoom($event)"></app-rooms-list>
 

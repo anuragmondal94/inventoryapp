@@ -9,6 +9,7 @@ import { EmployeeComponent } from '../employee/employee.component';
 export class ContainerComponent implements AfterContentInit {
   ngAfterContentInit(): void {
     console.log(this.employee)
+    
     this.employee.empName = 'Rick'
   }
 

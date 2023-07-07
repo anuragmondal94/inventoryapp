@@ -3,6 +3,8 @@
 <app-header></app-header>
 <!-- <app-header></app-header>
 <app-header></app-header> -->
+<!-- Using asyn pipe to display data in a stream -->
+<!-- {{rooms$ | async | json}} -->
 <div [hidden]="hideRooms">
     <!--Propety Binding-->
     Number of Rooms:
@@ -18,12 +20,25 @@
 <div>
     <button (click)="addRoom()">Add Room</button>
 </div>
+<h1>
+    <!-- {{getError$ | async}} -->
+    <!-- using map operator to modify getRooms$ stream to get the count of rooms -->
+    Number of Rooms : {{roomsCount$ | async}}
+</h1>
+
 <!--Built in Directive-->
-<div *ngIf="hideRooms">
+<div *ngIf="rooms$ | async as rooms">
     <!-- Communicating with parent using @input-->
-    <app-rooms-list [rooms]="roomList" [title]="title" (selectedRoom)="selectRoom($event)"></app-rooms-list>
+    <app-rooms-list [rooms]="rooms" [title]="title" (selectedRoom)="selectRoom($event)"></app-rooms-list>
 
 </div>
 
 <!--Event Binding-->
 <button (click)="toggle()">Toggle</button>
+<button (click)="editRoom()">Edit Room</button>
+<button (click)="deleteRoom()">Delete Room</button>
+
+
+<h1>
+    {{totalBytes}} loaded
+</h1>

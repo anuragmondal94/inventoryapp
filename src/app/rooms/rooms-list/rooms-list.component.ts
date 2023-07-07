@@ -18,7 +18,7 @@ export class RoomsListComponent implements OnChanges , OnDestroy {
     }
   }
 
-  @Input() rooms : RoomList [] = [];
+  @Input() rooms : RoomList [] | null = [];
 
   @Input() title: string = ''
 

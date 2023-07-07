@@ -55,7 +55,7 @@ export class RoomsService {
   // ]
 
   roomlist: RoomList[] = []
-  headers = new HttpHeaders({ 'token': '12345ionrgionw' })
+  // headers = new HttpHeaders({ 'token': '12345ionrgionw' })
 
 
   getRooms() {
@@ -64,16 +64,12 @@ export class RoomsService {
   }
 
   // "$" is used to denote a stream
-  getRooms$ = this.http.get<RoomList[]>('/api/rooms', {
-    headers: this.headers
-  }).pipe(
+  getRooms$ = this.http.get<RoomList[]>('/api/rooms').pipe(
     shareReplay(1)
   )
 
   addRoom(room: RoomList) {
-    return this.http.post<RoomList[]>('/api/rooms', room, {
-      headers: this.headers
-    })
+    return this.http.post<RoomList[]>('/api/rooms', room)
   }
 
   editRoom(room: RoomList) {

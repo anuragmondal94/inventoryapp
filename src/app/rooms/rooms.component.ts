@@ -137,10 +137,10 @@ export class RoomsComponent implements OnInit, AfterViewInit {
     const room: RoomList = {
       // roomNumber: '4',
       roomType: 'Additional Room',
-      amenites: 'Air Conditioner , WIFI, Tv, Kitchen, Lounge, Study',
+      amenities: 'Air Conditioner , WIFI, Tv, Kitchen, Lounge, Study',
       price: 2000,
       photos: 'https://unsplash.com/photos/YMOHw3F1Hdk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
-      checkInTIme: new Date('11-Nov-2023'),
+      checkInTime: new Date('11-Nov-2023'),
       checkoutTime: new Date('12-Nov-2023'),
       rating: 3.99,
       roomNumber: ''
@@ -158,10 +158,10 @@ export class RoomsComponent implements OnInit, AfterViewInit {
     const room: RoomList = {
       roomNumber: '3',
       roomType: 'Additional Room',
-      amenites: 'Air Conditioner , WIFI, Tv, Kitchen, Lounge, Study',
+      amenities: 'Air Conditioner , WIFI, Tv, Kitchen, Lounge, Study',
       price: 2000,
       photos: 'https://unsplash.com/photos/YMOHw3F1Hdk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
-      checkInTIme: new Date('11-Nov-2023'),
+      checkInTime: new Date('11-Nov-2023'),
       checkoutTime: new Date('12-Nov-2023'),
       rating: 3.99,
     }

@@ -6,7 +6,8 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:'employee', component: EmployeeComponent},
-  
+  // implementing lazy loading
+  {path:'rooms', loadChildren :() => import('./rooms/rooms.module').then(m=>m.RoomsModule) },
   {path: 'login', component: LoginComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: '**', component: NotfoundComponent},

@@ -20,7 +20,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { EmailValidatorDirective } from './emailValidator/email-validator.directive';
-import { RoomsModule } from './rooms/rooms.module';
+// import { RoomsModule } from './rooms/rooms.module';
 import { HeaderModule } from './header/header.module';
 
 function initFactory(initService: InitService) {
@@ -39,7 +39,7 @@ function initFactory(initService: InitService) {
   ],
   imports: [
     BrowserModule,
-    RoomsModule,
+    // RoomsModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,

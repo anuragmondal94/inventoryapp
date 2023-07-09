@@ -1,0 +1,18 @@
+<form>
+    <div class="form-group">
+        <!-- adding custom validation using custom directive -->
+        <input  #emailControl="ngModel" appEmailValidator appHover="green" type="email" class="form-control" name="name" [(ngModel)] = "email" placeholder="Provide your UserName" >
+        <div>
+            {{emailControl.errors | json}}
+        </div>
+
+    </div>
+    <div class="form-group">
+        <input appHover="steelblue" type="password" class="form-control" name="name" [(ngModel)] = "password" placeholder="Enter you Password" >
+
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" (click)="login()">Login</button>
+
+    </div>
+</form>

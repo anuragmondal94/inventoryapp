@@ -4,6 +4,7 @@ import { HeaderComponent } from '../header/header.component';
 import { RoomsService } from './services/rooms.service';
 import { Observable, Subject, Subscription, catchError, map, of } from 'rxjs';
 import { HttpEventType } from '@angular/common/http';
+import { ConfigService } from '../services/config.service';
 
 @Component({
   selector: 'app-rooms',
@@ -45,7 +46,8 @@ export class RoomsComponent implements OnInit, AfterViewInit {
 
   @ViewChildren(HeaderComponent) headerChildrenComponent !: QueryList<HeaderComponent>
 
-  constructor(@SkipSelf() private roomService: RoomsService) { }
+  constructor(@SkipSelf() private roomService: RoomsService,
+  private configService: ConfigService) { }
 
   totalBytes = 0
 
@@ -123,7 +125,7 @@ export class RoomsComponent implements OnInit, AfterViewInit {
   toggle() {
 
     this.hideRooms = !this.hideRooms
-    this.title = "Rooms List"
+    this.title = "Rooms List 2"
 
   }
 

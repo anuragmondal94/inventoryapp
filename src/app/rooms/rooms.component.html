@@ -1,30 +1,28 @@
 <!--interpolation-->
 <!-- <h1> Welcome to {{hotelName}}</h1> -->
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <!-- <app-header></app-header>
 <app-header></app-header> -->
 <!-- Using asyn pipe to display data in a stream -->
 <!-- {{rooms$ | async | json}} -->
-<div [hidden]="hideRooms">
-    <!--Propety Binding-->
+<!-- <div [hidden]="hideRooms">
     Number of Rooms:
     <div [innerText]="numberOfRooms"></div>
-</div>
+</div> -->
 <!--Display if rooms.availableRooms is available else display no rooms-->
 <!-- {{rooms?.availableRooms ?? 'No Rooms'}} -->
 <!-- {{roomList | json}} -->
 
-<div *ngIf="selectedRoom">
+<!-- <div *ngIf="selectedRoom">
     {{selectedRoom | json}}
-</div>
+</div> -->
 <div>
-    <button (click)="addRoom()">Add Room</button>
+    <button class="btn btn-success" routerLink="add">Add Room</button>
 </div>
-<h1>
-    <!-- {{getError$ | async}} -->
-    <!-- using map operator to modify getRooms$ stream to get the count of rooms -->
+<!-- <h1>
+    {{getError$ | async}}
     Number of Rooms : {{roomsCount$ | async}}
-</h1>
+</h1> -->
 
 <!--Built in Directive-->
 <div *ngIf="rooms$ | async as rooms">
@@ -34,13 +32,13 @@
 </div>
 
 <!--Event Binding-->
-<button (click)="toggle()">Toggle</button>
+<!-- <button (click)="toggle()">Toggle</button>
 <button (click)="editRoom()">Edit Room</button>
-<button (click)="deleteRoom()">Delete Room</button>
+<button (click)="deleteRoom()">Delete Room</button> -->
 
 
-<h1>
+<!-- <h1>
     {{totalBytes}} loaded
-</h1>
+</h1> -->
 
 <router-outlet></router-outlet>

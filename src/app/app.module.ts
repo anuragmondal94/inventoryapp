@@ -22,6 +22,8 @@ import { LoginComponent } from './login/login.component';
 import { EmailValidatorDirective } from './emailValidator/email-validator.directive';
 // import { RoomsModule } from './rooms/rooms.module';
 import { HeaderModule } from './header/header.module';
+import { RouteConfigToken } from './rooms/services/routeConfig.service';
+import { ROUTES } from '@angular/router';
 
 function initFactory(initService: InitService) {
   return () => initService.init()
@@ -55,6 +57,11 @@ function initFactory(initService: InitService) {
     {
       provide: APP_SERVICE_CONFIG,
       useValue: APP_CONFIG
+    },
+    {
+      provide: RouteConfigToken,
+      useValue: {title: 'Home'},
+
     },
     {
       provide: HTTP_INTERCEPTORS,

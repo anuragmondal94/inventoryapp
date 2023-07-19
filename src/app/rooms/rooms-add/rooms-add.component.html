@@ -1,8 +1,8 @@
-{{roomsForm.pristine | json}}
+<!-- {{roomsForm.pristine | json}}
 {{roomsForm.dirty | json}}
 {{roomsForm.invalid | json}}
 {{roomsForm.valid | json}}
-{{roomsForm.value | json}}
+{{roomsForm.value | json}} -->
 
 <div *ngIf="successMessage !== ''" class="alert alert-success"> {{successMessage}}</div>
 <form #roomsForm="ngForm" (ngSubmit)="AddRoom(roomsForm)">
@@ -11,6 +11,7 @@
         class="form-control" type="text" name="roomType"
         [(ngModel)]="room.roomType"
          placeholder="Room Type"
+         [ngModelOptions]="{updateOn: 'blur'}"
          />
 
     </div>

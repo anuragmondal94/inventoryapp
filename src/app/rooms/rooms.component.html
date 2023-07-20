@@ -24,6 +24,10 @@
     Number of Rooms : {{roomsCount$ | async}}
 </h1> -->
 
+<!-- <div>
+    <input type="number" class="form-control" placeholder="Price" [formControl] = "priceFilter" >
+</div> -->
+
 <!--Built in Directive-->
 <div *ngIf="rooms$ | async as rooms">
     <!-- Communicating with parent using @input-->

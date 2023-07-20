@@ -6,7 +6,7 @@ import { RoomList } from '../rooms';
   templateUrl: './rooms-list.component.html',
   styleUrls: ['./rooms-list.component.scss'],
   // only use when data not being changed in the component. rely on i/p adn o/p
-  changeDetection : ChangeDetectionStrategy.OnPush
+  // changeDetection : ChangeDetectionStrategy.OnPush
  
 })
 export class RoomsListComponent implements OnChanges , OnDestroy {
